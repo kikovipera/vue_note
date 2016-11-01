@@ -50,11 +50,6 @@ export default {
       selected: ''
     }
   },
-  ready() {
-    if (this.note.length >= 1) {
-      this.selectNote()
-    }
-  },
   methods: {
     del() {
       if (confirm('确定删除当前选中的笔记吗?')) {

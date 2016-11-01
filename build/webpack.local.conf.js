@@ -18,7 +18,7 @@ if (yargs.server) {
     //将会自动在 dist 目录中生成一个名为 index.html 的文件
     new HtmlwebpackPlugin({
         title: yargs.item,
-        template: './build/tpl.html',
+        template: 'build/tpl.html',
         inject: 'body',
         chunks: [yargs.item, 'common'], //只加载配置 excludeChunks 排除
         // filename: 'node.html' // 另外输出

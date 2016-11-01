@@ -16,7 +16,7 @@ render(app, {
   debug: true
 })
 
-app.use(server(path.join(__dirname, '../../'))) //静态
+app.use(server(path.join(__dirname, '../'))) //静态
 app.use(bodyParser())
 app.use(note.routes())
 

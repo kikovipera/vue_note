@@ -1,15 +1,13 @@
 <template>
 <div id="app">
-  <note></note>
-  <router-view transition="fadeInDown"></router-view>
+  <router-view></router-view>
 </div>
 </template>
+<!-- transition="fadeInDown" -->
 <script>
-import Note from './Note.vue'
 import store from '../vuex/store.js'
 export default {
-  store,
-  components: { Note }
+  store
 }
 </script>
 <style>

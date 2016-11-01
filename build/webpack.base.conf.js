@@ -8,7 +8,7 @@ const generateExtractLoaders = loaders => {
 
 /*------入口------*/
 const entry = {}
-entry.note = './main.js'
+entry.note = './components/Router.js'
 entry.common = [
   'vue',
   './common/common.css'

@@ -5,5 +5,3 @@ const app = require('./server/server')
 app.listen(7788, () => {
   console.log('localhost:' + 7788)
 })
-
-
