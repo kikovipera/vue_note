@@ -17,7 +17,7 @@ r.map({
     name: 'home',
     component: Login
   },
-  'index': {
+  'home': {
     name: 'home',
     component: Home
   },

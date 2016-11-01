@@ -9,7 +9,7 @@
     "build": "gulp --product && gulp zip",
     "server": "gulp server"
   },
-  "author": "",
+  "author": "wenhao",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.1.21",
@@ -86,8 +86,6 @@
   "keywords": [
     "vue/note"
   ],
-  "author": "wenhao",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/baiwenhao/vuejs_note/issues"
   },
