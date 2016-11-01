@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= staticTag %></title>
+  <meta charset="utf-8" />
+  <meta name="keywords" content="爱屋吉屋微信企业号">
+  <meta name="description" content="爱屋吉屋微信企业号">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" type="text/css" href="/dist/common.css">
+  <link rel="stylesheet" type="text/css" href="/dist/<%= staticTag %>.css">
+  <script>
+  window.pageConfig = {
+    siteUrl: '<%= siteUrl %>',
+    staticTag: '<%= staticTag %>',
+    appid: 'wxa5d9d1d66935ae04',
+    platform: 'wxent',
+    isDevPage: false
+  }
+  pageConfig['<%= staticTag %>'] = {
+    "watermark": "33787725d"
+  }
+  </script>
+</head>
+<body>
+  <div class="mod-<%= staticTag %>"></div>
+  <script src="/dist/vue_common.js"></script>
+  <script src="/dist/<%= staticTag %>.js"></script>
+</body>
+</html>

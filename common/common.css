@@ -1,0 +1,60 @@
+html,
+body,
+em,
+img,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.over {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.vue-box {
+  width: 640px;
+  margin: auto;
+  border: 1px solid #d3d3d3;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}

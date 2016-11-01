@@ -1,0 +1,41 @@
+{
+  "extends": "vue",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "semi": 0,
+    "comma-dangle": 0,
+    "global-require": 0,
+    "no-alert": 0,
+    "no-console": 0,
+    "no-param-reassign": 0,
+    "max-len": 0,
+    "func-names": 0,
+    "no-underscore-dangle": 0,
+    "no-unused-vars": 1,
+    "object-shorthand": 1,
+    "arrow-body-style": 0,
+    "no-new": 0,
+    "spaced-comment": 0,
+    "indent": 0,
+    "eol-last": 0,
+    "space-before-function-paren": 0
+  },
+  "globals": {
+    "$": true,
+    "_": true,
+    "Vue": true,
+    "Vuex": true,
+    "VueCommon": true,
+    "pageConfig": true,
+    "CodeMirror": true,
+    "socket": true,
+    "toastr": true,
+    "Clipboard": true,
+    "Promise": true,
+    "log": true
+  }
+}
