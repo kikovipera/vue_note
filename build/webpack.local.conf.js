@@ -54,7 +54,8 @@ config.plugins = config.plugins.concat([
   new webpack.ProvidePlugin({ // 全局对象
     Fetch: 'fetch',
     Vue: 'vue',
-    log: 'log'
+    log: 'log',
+    Toast: 'toast'
   }),
   // new DashboardPlugin(dashboard.setData) // 编译插件
 ])

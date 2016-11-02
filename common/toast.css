@@ -1,0 +1,158 @@
+/*------位置------*/
+.fe-toast-top,.fe-toast-bottom,.fe-toast-middle{
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  left: 0;
+}
+.fe-toast-top{
+  top: -40px;
+  animation-name: top;
+}
+.fe-toast-middle{
+  top: 50%;
+}
+.fe-toast-bottom{
+  bottom: -40px;
+  animation-name: bottom;
+}
+@keyframes middle{
+  to{transform: scale(0);opacity: 0}
+}
+@keyframes top{
+  50%{top: 19px}
+  to{top: 16px}
+}
+@keyframes bottom{
+  50%{bottom: 15px}
+  to{bottom: 12px}
+}
+
+/*------toast------*/
+.fe-toast,.animated {
+  animation-duration: .3s;
+  animation-fill-mode: both;
+}
+.fe-toast-mask{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed
+}
+.fe-toast{
+  box-sizing: border-box;
+}
+.fe-toast span{
+  min-width: 4em;
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+}
+.fe-text,.fe-error{
+  width: 560px;
+  height: 40px;
+  color: #212121;
+  border-radius: 2px;
+  line-height: 40px;
+  background-color: #f2fce7;
+  border: solid 1px #cbdabb;
+  box-shadow: 0 2px 4px 0 rgba(121, 140, 100, 0.29);
+}
+.fe-error{
+  border: solid 1px #ffddcc;
+  background: #ffeee6;
+}
+.fe-loading{
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  position: relative;
+  border-radius: 5px;
+  padding: 20px;
+  color: #fff;
+  background-color: rgba(000, 000, 000, 0.6);
+}
+.fe-toast .iconfont{
+  display: block;
+  font-size: 46px;
+  margin-bottom: 4px;
+}
+.fe-toast span+span{
+  margin-left: 6px;
+  margin-bottom: 10px;
+}
+/*结束动画*/
+.fe-toast .animated{
+  animation-name: fe-end-opacity
+}
+@keyframes fe-end-opacity{
+  0%{opacity: 1}
+  to{opacity: 0}
+}
+/*出场动画*/
+.fe-toast .fe-scale{animation-name: fe-scale}
+.fe-toast .fe-opacity{animation-name: fe-opacity}
+@keyframes fe-scale{
+  50%{transform: scale(1.1)}
+  to{transform: scale(1)}
+}
+@keyframes fe-opacity{
+  0%{opacity: 0}
+  to{opacity: 1}
+}
+
+/*------loading------*/
+.showbox {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5%;
+}
+// end demo-specific
+.mask-loading {
+  widows: 100%;
+  background-color: rgba(0, 0, 0, .75);
+}
+.spinner {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}

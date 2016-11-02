@@ -18,7 +18,8 @@ config.plugins = (config.plugins || []).concat([
     alwaysNotify: true
   }),
   new webpack.ProvidePlugin({ // 全局变量
-    Vue: 'vue'
+    Vue: 'vue',
+    Toast: 'toast'
   })
 ])
 

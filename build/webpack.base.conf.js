@@ -8,7 +8,7 @@ const generateExtractLoaders = loaders => {
 
 /*------入口------*/
 const entry = {}
-entry.note = './components/Router.js'
+entry.note = './components/App.js'
 entry.common = [
   'vue',
   './common/common.css'
@@ -26,7 +26,8 @@ const config = {
     extension: ['', '.js', '.vue'],
     root: path.resolve('./common'), // 先查找root，也可直接根目录用./
     alias: {
-      'log': 'log.js'
+      'log': 'log.js',
+      'toast': 'toast'
     }
   },
   resolveLoader: {
