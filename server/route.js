@@ -8,7 +8,26 @@ const wrap = require('co-monk') //
 const note = wrap(db.get('note'))
 const list = wrap(db.get('list'))
 
+// 入口
 router.get('/', function*() {
+  yield this.render('index', {
+    siteUrl: '',
+    staticTag: 'note'
+  })
+})
+router.get('/login', function*() {
+  yield this.render('index', {
+    siteUrl: '',
+    staticTag: 'note'
+  })
+})
+router.get('/user', function*() {
+  yield this.render('index', {
+    siteUrl: '',
+    staticTag: 'note'
+  })
+})
+router.get('/home', function*() {
   yield this.render('index', {
     siteUrl: '',
     staticTag: 'note'

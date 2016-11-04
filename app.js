@@ -13,5 +13,8 @@ const route = new Router({
   saveScrollPosition: true
 })
 route.map(RouteMap)
+route.redirect({
+  '*': '/login'
+})
 sync(Store, route)
 route.start(App, '.mod-note')
