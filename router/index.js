@@ -1,26 +1,28 @@
 import Login from './login'
 import User from './user'
 import Home from './home'
-module.exports = {
+
+export default Object.assign({},
   Login,
   User,
   Home
-}
+)
 
-// const Home = r => require.ensure([], () => r(require('../components/Home.vue')), 'home')
 // const Login = r => require.ensure([], () => r(require('../components/Login.vue')), 'login')
 // const User = r => require.ensure([], () => r(require('../components/User.vue')), 'user')
+// const Home = r => require.ensure([], () => r(require('../components/Home.vue')), 'home')
+
 // export default {
 //   '': {
 //     name: 'Login',
-//     component: Login
+//     component: r => require.ensure([], () => r(require('../components/Login.vue')), 'login')
 //   },
 //   'user': {
 //     name: 'user',
-//     component: User
+//     component: r => require.ensure([], () => r(require('../components/User.vue')), 'user')
 //   },
 //   'home': {
 //     name: 'user',
-//     component: Home
+//     component: r => require.ensure([], () => r(require('../components/Home.vue')), 'home')
 //   }
 // }

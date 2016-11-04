@@ -12,9 +12,6 @@ const route = new Router({
   history: true,
   saveScrollPosition: true
 })
-// const Login = r => require.ensure([], () => r(require('./components/Login.vue')), 'login')
 route.map(RouteMap)
-log(RouteMap)
-// route.map(Login)
 sync(Store, route)
 route.start(App, '.mod-note')
