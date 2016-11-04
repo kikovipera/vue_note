@@ -20,7 +20,7 @@ const config = {
   output: {
     path: path.join(__dirname, '../dist/'),
     filename: '[name].js', //entry 的 key
-    publicPath: '/dist/' // cdn
+    publicPath: '/dist/' // server 的时候用/  只编译就用/dest/
   },
   resolve: {
     extension: ['', '.js', '.vue'],

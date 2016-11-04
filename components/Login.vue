@@ -52,6 +52,7 @@ export default {
 
 <style lang="less">
 #login{
+  font-size: 14px;
   left: 50%;
   top: 50%;
   width: 30%;
@@ -96,7 +97,6 @@ export default {
     color: #fff;
     height: 36px;
     cursor: pointer;
-    font-size: 14px;
     border-radius: 5px;
     padding: 0 12px;
     display: inline-block;
