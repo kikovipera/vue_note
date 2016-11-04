@@ -8,7 +8,7 @@ const generateExtractLoaders = loaders => {
 
 /*------入口------*/
 const entry = {}
-entry.note = './components/App.js'
+entry.note = './app.js'
 entry.common = [
   'vue',
   './common/common.css'
@@ -18,9 +18,9 @@ entry.common = [
 const config = {
   entry: entry,
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: path.join(__dirname, '../dist/'),
     filename: '[name].js', //entry 的 key
-    publicPath: '/' // cdn
+    publicPath: '/dist/' // cdn
   },
   resolve: {
     extension: ['', '.js', '.vue'],
