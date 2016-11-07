@@ -21,13 +21,13 @@ if (yargs.server) {
         template: 'build/tpl.html',
         inject: 'body',
         chunks: [yargs.item, 'common'], //只加载配置 excludeChunks 排除
-        // filename: 'node.html' // 另外输出
+        filename: '../index.html' // 另外输出
     }),
     new BrowserSyncPlugin({
         host: 'localhost',
         port: 8888,
         server: {
-            baseDir: ['dist'] // index.html 在这个目录
+            baseDir: ['./'] // index.html 在这个目录
         }
     }, {
         reload: true // 自动刷新
@@ -57,6 +57,7 @@ config.plugins = config.plugins.concat([
     log: 'log',
     Toast: 'toast'
   }),
+  new webpack.HotModuleReplacementPlugin()
   // new DashboardPlugin(dashboard.setData) // 编译插件
 ])
 

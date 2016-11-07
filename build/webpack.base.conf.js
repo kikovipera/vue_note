@@ -19,8 +19,8 @@ const config = {
   entry: entry,
   output: {
     path: path.join(__dirname, '../dist/'),
-    filename: '[name].js', //entry 的 key
-    publicPath: '/dist/' // server 的时候用/  只编译就用/dest/
+    filename: '[name].js',
+    publicPath: '/dist/'
   },
   resolve: {
     extension: ['', '.js', '.vue'],
