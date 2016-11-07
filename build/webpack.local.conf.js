@@ -57,7 +57,6 @@ config.plugins = config.plugins.concat([
     log: 'log',
     Toast: 'toast'
   }),
-  new webpack.HotModuleReplacementPlugin()
   // new DashboardPlugin(dashboard.setData) // 编译插件
 ])
 
