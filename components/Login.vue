@@ -1,7 +1,7 @@
 <template>
 <div id="login">
   <div class="user_tab">
-    <span :class="{'active': menu === 'login'}" @click="setMenu('login')">登录1</span>
+    <span :class="{'active': menu === 'login'}" @click="setMenu('login')">登录</span>
     <span :class="{'active': menu === 'register'}" @click="setMenu('register')">注册</span>
   </div>
   <div v-show="menu === 'login'" class="user_login">

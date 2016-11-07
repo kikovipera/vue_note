@@ -76,7 +76,7 @@ gulp.task('ico', () => {
 
 gulp.task('server', () => {
   require('gulp-nodemon')({
-    script: './server/server.js',
+    script: './server/server-static.js',
     ignore: ['dist/*', '*.vue']
   }).on('restart', function() {
     console.log('localhost:8888')
