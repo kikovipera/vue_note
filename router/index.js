@@ -15,14 +15,14 @@ export default Object.assign({},
 // export default {
 //   '': {
 //     name: 'Login',
-//     component: r => require.ensure([], () => r(require('../components/Login.vue')), 'login')
+//     component: Login
 //   },
 //   'user': {
 //     name: 'user',
-//     component: r => require.ensure([], () => r(require('../components/User.vue')), 'user')
+//     component: User
 //   },
 //   'home': {
 //     name: 'user',
-//     component: r => require.ensure([], () => r(require('../components/Home.vue')), 'home')
+//     component: Home
 //   }
 // }

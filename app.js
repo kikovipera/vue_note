@@ -17,4 +17,7 @@ route.redirect({
   '*': '/login'
 })
 sync(Store, route)
-route.start(App, '.mod-note')
+route.start(App, '.mod-app')
+// store.state.route.path   // current path (string)
+// store.state.route.params // current params (object)
+// store.state.route.query  // current query (object)

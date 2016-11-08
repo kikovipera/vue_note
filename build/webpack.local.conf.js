@@ -17,10 +17,10 @@ if (yargs.server) {
   config.plugins = [
     //将会自动在 dist 目录中生成一个名为 index.html 的文件
     new HtmlwebpackPlugin({
-        title: yargs.item,
+        title: '我的笔记',
         template: 'build/tpl.html',
         inject: 'body',
-        chunks: [yargs.item, 'common'], //只加载配置 excludeChunks 排除
+        chunks: ['app', 'common'], //只加载配置 excludeChunks 排除
         filename: '../index.html' // 另外输出
     }),
     new BrowserSyncPlugin({

@@ -1,20 +1,23 @@
 <template>
 <note></note>
-<div class="parent">
-  <list></list>
-  <main></main>
+<div class="parent">22
+  <!-- <list></list> -->
 </div>
 </template>
 <script>
+//
+//
+// <main></main>
 import Note from './Note.vue'
-import List from './List.vue'
-import Main from './Main.vue'
-
+// import List from './List.vue'
+// import Main from './Main.vue'
+// import Store from '../vuex/store'
 export default {
+  // Store,
   components: {
     Note,
-    List,
-    Main
+    // List,
+    // Main
   }
 }
 </script>

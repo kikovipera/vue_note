@@ -36,6 +36,9 @@ export default {
       menu: 'login'
     }
   },
+  ready() {
+    Toast.top('1111')
+  },
   methods: {
     login() {
       alert('登录')
