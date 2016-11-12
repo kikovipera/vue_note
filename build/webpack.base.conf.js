@@ -1,20 +1,18 @@
 const path = require('path')
-const ExtractTextPlugin = require("extract-text-webpack-plugin") //link
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const generateExtractLoaders = loaders => {
   return loaders.map(function (loader) {
     return loader + '-loader' + (!yargs.product ? '?sourceMap' : '')
   }).join('!')
 }
 
-/*------入口------*/
 const entry = {}
-entry.app = './app.js'
+entry.app = './components/app.js'
 entry.common = [
   'vue',
   './common/common.css'
 ]
 
-/*------基础配置------*/
 const config = {
   entry: entry,
   output: {
@@ -81,6 +79,3 @@ const config = {
 }
 
 module.exports = config
-
-
-// webpack-dashboard  提示插件

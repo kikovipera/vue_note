@@ -26,14 +26,18 @@ import { addNote, delNote, selectNote, getNote } from '../vuex/actions'
 export default {
   vuex: {
     getters: {
-      // note,
+      // note(state) {
+      //   return state
+      // }
       // noteActive
     },
     actions: {
       addNote,
       delNote,
       selectNote,
-      getNote
+      getNote: ({ dispatch, state }) => {
+        console.log(dispatch)
+      }
     }
   },
   created() {

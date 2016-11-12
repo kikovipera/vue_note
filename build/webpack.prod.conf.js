@@ -3,11 +3,7 @@ const config = require('./webpack.base.conf.js')
 const ExtractTextPlugin = require("extract-text-webpack-plugin") // link
 const WebpackNotifierPlugin = require('webpack-notifier') // err
 
-const Dashboard = require('webpack-dashboard');
-const DashboardPlugin = require('webpack-dashboard/plugin');
-const dashboard = new Dashboard()
-
-config.plugins = (config.plugins || []).concat([
+config.plugins = config.plugins.concat([
   new webpack.optimize.UglifyJsPlugin({ // 压缩
     compress: { warnings: false }
   }),

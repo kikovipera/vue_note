@@ -4,6 +4,12 @@
 </div>
 </template>
 <!-- transition="fadeInDown" -->
+<script>
+// import Store from '../vuex/store'
+// export default {
+//   Store
+// }
+</script>
 <style>
 #app {
   width: 100%;

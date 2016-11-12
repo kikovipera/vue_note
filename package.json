@@ -4,13 +4,11 @@
   "description": "note",
   "main": "main.js",
   "scripts": {
-    "start": "better-npm-run build",
-    "server": "better-npm-run build:server",
-    "zip": "better-npm-run build:zip"
+    "start": "better-npm-run build:test",
+    "build": "better-npm-run build:zip"
   },
   "betterScripts": {
-    "build": "gulp",
-    "build:server": "gulp --server",
+    "build:test": "gulp",
     "build:zip": "gulp --product && gulp zip"
   },
   "author": "wenhao",

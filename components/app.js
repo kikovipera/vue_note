@@ -1,10 +1,10 @@
-require('./iconfont/iconfont.css')
-require('./common/filter.js')
+require('../iconfont/iconfont.css')
+require('../common/filter.js')
 import { sync } from 'vuex-router-sync'
 import Router from 'vue-router'
-import Store from './vuex/store'
-import RouteMap from './router'
-import App from './components/App.vue'
+import Store from '../vuex/store'
+import RouteMap from '../router'
+import App from './App.vue'
 Vue.use(Router)
 const route = new Router({
   root: window.pageConfig.siteUrl || '/',
