@@ -14,34 +14,26 @@
   </ul>
 </div>
 </template>
-<!--
-<div class="start">
-  <i class="iconfont icon-lajitong"></i>回收站 <span>10</span>
-</div>
--->
+
 <script>
-// import { note, noteActive } from '../vuex/getters'
+import { note, noteActive } from '../vuex/getters'
 import { addNote, delNote, selectNote, getNote } from '../vuex/actions'
 
 export default {
   vuex: {
     getters: {
-      // note(state) {
-      //   return state
-      // }
-      // noteActive
+      note,
+      noteActive
     },
     actions: {
       addNote,
       delNote,
       selectNote,
-      getNote: ({ dispatch, state }) => {
-        console.log(dispatch)
-      }
+      getNote
     }
   },
   created() {
-    // this.getNote()
+    this.getNote()
   }
 }
 </script>

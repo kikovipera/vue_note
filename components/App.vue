@@ -3,22 +3,21 @@
   <router-view></router-view>
 </div>
 </template>
-<!-- transition="fadeInDown" -->
 <script>
-// import Store from '../vuex/store'
-// export default {
-//   Store
-// }
+import store from '../vuex/store.js'
+export default {
+  store
+}
 </script>
 <style>
 #app {
   width: 100%;
   height: 100%;
-  font-size: 16px;
-  background: #232426;
-  font-size: 12px;
-  box-sizing: border-box;
   padding: 10px;
+  font-size: 16px;
+  font-size: 12px;
+  background: #232426;
+  box-sizing: border-box;
 }
 /*main note公用*/
 .icon1{

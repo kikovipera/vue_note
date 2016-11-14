@@ -20,6 +20,7 @@ gulp.task('default', () => {
 })
 
 gulp.task('vue', () => {
+  gulp.start('del')
   webpack(config, (err, stats) => {
     console.log((stats.compilation.errors.toString() || stats.compilation.warnings.toString()).replace(/:|,/g,'\n======'));
     require('set-iterm2-badge')('我的笔记')

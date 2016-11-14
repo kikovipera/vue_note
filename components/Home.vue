@@ -1,29 +1,27 @@
 <template>
 <note></note>
-<div class="parent">22
-  <!-- <list></list> -->
+<div class="parent">
+  <list></list>
+  <Main></Main>
 </div>
 </template>
 <script>
-//
-//
-// <main></main>
 import Note from './Note.vue'
-// import List from './List.vue'
-// import Main from './Main.vue'
-// import Store from '../vuex/store'
+import List from './List.vue'
+import Main from './Main.vue'
+import Store from '../vuex/store'
 export default {
-  // Store,
+  Store,
   components: {
     Note,
-    // List,
-    // Main
+    List,
+    Main
   }
 }
 </script>
-
 <style>
 .parent{
-  overflow:hidden;height:100%;
+  overflow:hidden;
+  height:100%;
 }
 </style>

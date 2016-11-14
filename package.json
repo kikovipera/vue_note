@@ -5,10 +5,12 @@
   "main": "main.js",
   "scripts": {
     "start": "better-npm-run build:test",
+    "server": "better-npm-run build:server",
     "build": "better-npm-run build:zip"
   },
   "betterScripts": {
-    "build:test": "gulp",
+    "build:test": "gulp vue",
+    "build:server": "gulp server",
     "build:zip": "gulp --product && gulp zip"
   },
   "author": "wenhao",

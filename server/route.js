@@ -11,19 +11,16 @@ const list = wrap(db.get('list'))
 // 入口
 router.get('/login', function*() {
   yield this.render('index', {
-    siteUrl: '',
     staticTag: 'app'
   })
 })
 router.get('/user', function*() {
   yield this.render('index', {
-    siteUrl: '',
     staticTag: 'app'
   })
 })
 router.get('/home', function*() {
   yield this.render('index', {
-    siteUrl: '',
     staticTag: 'app'
   })
 })
