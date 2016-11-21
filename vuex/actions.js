@@ -47,7 +47,7 @@ export const addList = ({ dispatch, state }) => { // 添加 list
     body: { type: state.note.note_active.type }
   })
   .then(res => {
-    dispatch(types.ADD_LIST, res.data)
+    dispatch(types.ADD_LIST, res.data[0])
     setListActive({ dispatch }, res.data[0])
   })
 }

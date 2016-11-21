@@ -49,7 +49,7 @@ ToastBase.prototype = {
     if (this.config.click) {
       list.addEventListener('click', function(){ // 点击消失 去掉动画执行默认的 消失的动画 ，之后销毁
         this.className = 'animated click' // 这是还没触发倒计时的销毁事件
-        this.addEventListener('animationend', () => { // 消失
+        this.addEventListener('webkitAnimationEnd', () => { // 消失
           self._[position].removeChild(this.parentNode) // this 指向list
           if (position === 'middle') self.computed()
           self.remove(position)
@@ -80,10 +80,10 @@ ToastBase.prototype = {
   },
   // 事件
   event(list, p, time) {
-    list.addEventListener('animationend', () => { // 出现
+    list.addEventListener('webkitAnimationEnd', () => { // 出现
       setTimeout(() => {
         list.className = 'animated' // 触发消失动画
-        list.addEventListener('animationend', () => { // 消失
+        list.addEventListener('webkitAnimationEnd', () => { // 消失
           this._[p].removeChild(list.parentNode) // 销毁位置里的列表
           if (p === 'middle') this.computed()
           this.remove(p) // 销毁列表每次都会触发 销毁位置

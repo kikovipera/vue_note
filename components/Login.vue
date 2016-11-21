@@ -6,10 +6,10 @@
   </div>
   <div v-show="menu === 'login'" class="user_login">
     <div class="start">
-      <input type="text" placeholder="邮箱名" />
+      <input type="text" placeholder="邮箱名" v-model="username" />
     </div>
     <div class="start">
-      <input type="password" placeholder="密码" />
+      <input type="password" placeholder="密码" v-model="password" />
     </div>
     <div class="start">
       <a class="submit" @click="login">登录</a>
@@ -17,10 +17,10 @@
   </div>
   <div v-show="menu === 'register'" class="user_register">
     <div class="start">
-      <input type="text" placeholder="邮箱名">
+      <input type="text" placeholder="邮箱名" v-model="register_username">
     </div>
     <div class="start">
-      <input type="password" placeholder="6-12位密码">
+      <input type="password" placeholder="6-12位密码" v-model="register_password">
     </div>
     <div class="start">
       <a class="submit" @click="register">注册</a>
@@ -28,23 +28,46 @@
   </div>
 </div>
 </template>
-
 <script>
+import { filterPhone } from '../common/util'
 export default {
   data() {
     return {
-      menu: 'login'
+      menu: 'login',
+      password: '',
+      username: '',
+      register_username: '',
+      register_password: ''
     }
-  },
-  ready() {
-    Toast.top('1111')
   },
   methods: {
     login() {
-      alert('登录')
+      Fetch('/login', {
+        method: 'post',
+        body: {
+          username: this.username,
+          password: this.password
+        }
+      })
+      .then(res => {
+        if (res) {
+          location.assign('/home')
+        }
+      })
     },
     register() {
-      alert('注册')
+      Fetch('/register', {
+        method: 'post',
+        body: {
+          username: this.register_username,
+          password: this.register_password
+        }
+      })
+      .then(res => {
+        if (res) {
+          Toast.middle('注册成功')
+        }
+      })
     },
     setMenu(key) {
       this.menu = key
@@ -52,7 +75,6 @@ export default {
   }
 }
 </script>
-
 <style lang="less">
 #login{
   font-size: 14px;

@@ -1,18 +1,20 @@
-const sutil = {
-  success() {
+const msg = require('./message')
+module.exports = {
+  success(ctx, value) {
     ctx.body = {
-      code: 200,
+      status: 1,
       data: value
     }
     return false
   },
-  failed() {
+  failed(ctx, code) {
     ctx.body = {
-      code: code,
-      message: message[code] || ''
+      status: code,
+      msg: msg[code]
     }
     return false
   }
+  // *checkLogin() {
+  //
+  // }
 }
-
-export default sutil
