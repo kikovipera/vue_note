@@ -15,6 +15,7 @@ module.exports = {
     return false
   }
   // *checkLogin() {
-  //
+  //   if (this.cookies && this.cookies.password) return
+  //   this.redirect('/login')
   // }
 }

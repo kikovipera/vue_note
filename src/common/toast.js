@@ -25,7 +25,8 @@ ToastBase.prototype = {
     const mask = document.querySelector('#fe-toast-mask')
     const position = this.config.position
     if (this.config.mask) {
-      this.mask = mask ? mask : ToastCreate('div', {
+      this.mask = mask ?
+      mask : ToastCreate('div', {
         r: true,
         id: 'fe-toast-mask',
         cla: 'fe-toast-mask'
@@ -67,14 +68,14 @@ ToastBase.prototype = {
         delete this._[p]
       }
     } else { // 销毁位置模块
-      for (let i in this._) {
+      for (const i in this._) {
         this._[i] && document.body.removeChild(this._[i])
         delete this._[i]
       }
     }
     if (Object.keys(this._).length !== 0) return // 如果还要位置存在 不能消除遮罩层
     clearTimeout(this.timer)
-    this.timer = setTimeout(() =>{
+    this.timer = setTimeout(() => {
       this.mask && (document.body.removeChild(this.mask)) // 三个元素同时调用会报错,遮罩已不存在
     }, 100)
   },
@@ -100,11 +101,11 @@ ToastBase.prototype = {
 }
 
 const ToastAssign = function() {
-  let target = Object() // 返回新对象 不改变最后一个对象
+  const target = Object() // 返回新对象 不改变最后一个对象
   for (let index = 0; index < arguments.length; index++) {
-    let source = arguments[index]
+    const source = arguments[index]
     if (source != null) {
-      for (let key in source) {
+      for (const key in source) {
         if (Object.prototype.hasOwnProperty.call(source, key)) {
           target[key] = source[key]
         }
@@ -139,7 +140,7 @@ Toast.prototype.init = function(opt) {
   if (conf.position === 'middle') this.computed()
 }
 Toast.prototype.merge = (arg, base) => {
-  return typeof arg === 'string' ? ToastAssign(base, {text: arg}) : ToastAssign(base, arg)
+  return typeof arg === 'string' ? ToastAssign(base, { text: arg }) : ToastAssign(base, arg)
 }
 
 // 位置

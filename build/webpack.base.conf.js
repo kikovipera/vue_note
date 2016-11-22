@@ -7,10 +7,10 @@ const generateExtractLoaders = loaders => {
 }
 
 const entry = {}
-entry.app = './components/app.js'
+entry.app = './src/components/app.js'
 entry.common = [
   'vue',
-  './common/common.css'
+  './src/common/common.css'
 ]
 
 const config = {
@@ -22,7 +22,7 @@ const config = {
   },
   resolve: {
     extension: ['', '.js', '.vue'],
-    root: path.resolve('./common'), // 先查找root，也可直接根目录用./
+    root: path.resolve('./src/common'), // 先查找root，也可直接根目录用./
     alias: {
       'log': 'log.js',
       'toast': 'toast'

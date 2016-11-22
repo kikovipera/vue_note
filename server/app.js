@@ -14,7 +14,6 @@ import db from './db'
 
 const app = koa()
 const router = koaRouter()
-
 render(app, {
   root: path.join(__dirname, '/'), // 模板
   layout: 'index',
@@ -22,9 +21,9 @@ render(app, {
   cache: false,
   debug: true
 })
-
 app.use(server(path.join(__dirname, '../'))) //静态
 app.use(bodyParser())
+app.keys = ['im a newer secret', 'i like turtle']
 
 const user = wrap(db.get('user'))
 

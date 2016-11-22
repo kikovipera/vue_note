@@ -8,11 +8,18 @@ module.exports = function(app, router, user) {
     const username = body.username
     const password = body.password
     const info = yield user.findOne({ username, password })
-    if (info && info.password === password) {
-      sutil.success(this, { status: 1 })
-    } else {
-      sutil.failed(this, 10002)
-    }
+
+    this.redirect('/home')
+
+    // if (info && info.password === password) {
+    //   sutil.success(this, { status: 1 })
+    // } else {
+    //   sutil.failed(this, 10002)
+    // }
+    // log(1)
+    // this.cookies.set('username', username)
+    // log(this.cookies.get('username'))
+
   })
 
   router.post('/register', function*(next) {

@@ -3,4 +3,4 @@ require('babel-core/register')({
 })
 const app = require('./server/app.js')
 app.listen(9999)
-console.log(9999)
+console.log('localhost:' + 9999)

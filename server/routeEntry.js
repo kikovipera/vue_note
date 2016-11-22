@@ -1,7 +1,6 @@
 module.exports = function(app, router) {
   app.use(router.routes())
   router.get('/login', function*() {
-    log(this.request)
     yield this.render('index', {
       staticTag: 'app'
     })

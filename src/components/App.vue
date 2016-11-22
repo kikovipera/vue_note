@@ -4,7 +4,7 @@
 </div>
 </template>
 <script>
-import store from '../vuex/store.js'
+import store from '../vuex/store'
 export default {
   store
 }

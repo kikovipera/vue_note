@@ -50,9 +50,7 @@ export default {
         }
       })
       .then(res => {
-        if (res) {
-          location.assign('/home')
-        }
+        // if (res) location.assign('/home')
       })
     },
     register() {
@@ -64,9 +62,7 @@ export default {
         }
       })
       .then(res => {
-        if (res) {
-          Toast.middle('注册成功')
-        }
+        if (res) Toast.middle('注册成功')
       })
     },
     setMenu(key) {
