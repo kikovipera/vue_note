@@ -1,5 +1,6 @@
 const url = require('url')
 const uuid = require('uuid')
+
 module.exports = function(app, router, list) {
   app.use(router.routes())
   router.get('/list', function*(next) { // 查询 list

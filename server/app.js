@@ -5,23 +5,23 @@ import koaRouter from 'koa-router'
 import cookie from 'koa-cookie'
 import server from 'koa-static'
 import render from 'koa-ejs'
-import entry from './routeEntry'
-import note from './routeNote'
-import list from './routeList'
-import login from './routeLogin'
+import entry from './router/routeEntry'
+import note from './router/routeNote'
+import list from './router/routeList'
+import login from './router/routeLogin'
 import wrap from 'co-monk'
 import db from './db'
 
 const app = koa()
 const router = koaRouter()
 render(app, {
-  root: path.join(__dirname, '/'), // 模板
+  root: path.join(__dirname, '/'), // 静态模板指向目录
   layout: 'index',
   viewExt: 'html',
   cache: false,
   debug: true
 })
-app.use(server(path.join(__dirname, '../'))) //静态
+app.use(server(path.join(__dirname, '../'))) //静态文件指向目录
 app.use(bodyParser())
 app.keys = ['im a newer secret', 'i like turtle']
 

@@ -1,8 +1,8 @@
 const uuid = require('uuid')
-const sutil = require('./sutil')
+const sutil = require('../sutil')
+
 module.exports = function(app, router, user) {
   app.use(router.routes())
-
   router.post('/login', function*(next) {
     const body = this.request.body
     const username = body.username
@@ -10,7 +10,6 @@ module.exports = function(app, router, user) {
     const info = yield user.findOne({ username, password })
 
     this.redirect('/home')
-
     // if (info && info.password === password) {
     //   sutil.success(this, { status: 1 })
     // } else {
